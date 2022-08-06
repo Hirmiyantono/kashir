@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Pembelian extends Model
 {
     use HasFactory;
+
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
+    public function stok()
+    {
+        return $this->belongsTo(Stok::class);
+    }
 }

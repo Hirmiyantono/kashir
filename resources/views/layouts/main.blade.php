@@ -6,6 +6,7 @@
   @vite('resources/css/app.css')
 
   <title></title>
+  @livewireStyles
 </head>
 <body class="antialiased bg-gray-100 dark-mode:bg-gray-900">
     @include('layouts.header')
@@ -23,5 +24,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    @livewireScripts
 </body>
 </html>

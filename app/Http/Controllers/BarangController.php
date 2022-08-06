@@ -14,8 +14,13 @@ class BarangController extends Controller
      */
     public function index()
     {
+        // $test = Barang::leftjoin('stoks', 'barangs.id_barang', '=', 'stoks.id_barang_stokfk')
+        // ->get();
+        // dd($test->toArray());
+        // die();
         return view('barang.index', [
-            "barangs" => Barang::all()
+            "barangs" => Barang::leftjoin('stoks', 'barangs.id_barang', '=', 'stoks.id_barang_stokfk')
+            ->simplepaginate(5)
         ]);
     }
 

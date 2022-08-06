@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Barang extends Model
 {
     use HasFactory;
+
+    public function stoks()
+    {
+        return $this->hasMany(Stok::class);
+    }
 }
